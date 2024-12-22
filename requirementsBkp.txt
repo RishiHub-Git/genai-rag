@@ -1,0 +1,13 @@
+pypdf
+langchain
+langchain_community
+langchain_text-splitters
+sentence-transformers
+cohere
+chromadb
+faiss-cpu
+openai==0.28
+tiktoken
+flask
+
+#Run Command $ pip install -r requirements.txt
