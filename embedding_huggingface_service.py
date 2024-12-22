@@ -2,7 +2,7 @@ import os
 from langchain.embeddings import HuggingFaceEmbeddings
 from langchain.vectorstores import Chroma
 from embeddings_abstract import Embeddings
-#from variables import Variables
+from variables import Variables
 
 import warnings
 warnings.filterwarnings('ignore')
@@ -13,8 +13,7 @@ class EmbeddingHGFService(Embeddings):
         Initialize the VectorService with vectorDb as None.
         """
         self.vectorDb = None
-        #self.API_variable = Variables.get_variable("HuggingFaceKey")
-        os.environ["HuggingFaceKey"] = "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"
+        self.API_variable = Variables.get_variable("HuggingFaceKey")
 
     def embedding_and_vector_persist(self, texts: any):
         """
